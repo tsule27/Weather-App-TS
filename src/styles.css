@@ -1,0 +1,72 @@
+.container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 60px;
+  max-width: 1000px;
+  background: radial-gradient(
+    328px at 2.9% 15%,
+    rgb(191, 224, 251) 0%,
+    rgb(232, 233, 251) 25.8%,
+    rgb(252, 239, 250) 50.8%,
+    rgb(234, 251, 251) 77.6%,
+    rgb(240, 251, 244) 100.7%
+  );
+}
+.card {
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+h1 {
+  margin: 38px;
+  font-size: 50px;
+  font-weight: 600;
+  padding: 5px;
+}
+h2 {
+  margin: 38px;
+  font-size: 35px;
+  font-weight: 550;
+  padding: 5px;
+}
+.search-bar {
+  padding: 30px;
+}
+.main {
+  position: relative;
+  left: 18px;
+}
+.temperature {
+  position: relative;
+  left: 50px;
+  font-size: 35px;
+  font-weight: 550;
+}
+.date {
+  position: relative;
+  bottom: 150px;
+  left: 550px;
+  font-size: 30px;
+  font-weight: 550;
+}
+.units {
+  position: relative;
+  bottom: 10px;
+  left: 55px;
+  font-size: 30px;
+  font-weight: 550;
+}
+.details {
+  position: relative;
+  bottom: 140px;
+  left: 550px;
+  font-size: 20px;
+}
+.breadcrumb {
+  position: relative;
+  left: 45px;
+  bottom: 140px;
+}
+.accordion {
+  position: relative;
+  bottom: 100px;
+  margin: 0 aut0;
+  padding: 0px;
+}
