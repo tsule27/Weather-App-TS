@@ -16,14 +16,17 @@
 }
 h1 {
   margin: 38px;
-  font-size: 50px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 40px;
   font-weight: 600;
   padding: 5px;
 }
 h2 {
   margin: 38px;
-  font-size: 35px;
-  font-weight: 550;
+  margin-top: 0px;
+  font-size: 30px;
+  font-weight: 500;
   padding: 5px;
 }
 .search-bar {
@@ -36,7 +39,7 @@ h2 {
 .temperature {
   position: relative;
   left: 50px;
-  font-size: 80 px;
+  font-size: 70px;
   font-weight: 550;
 }
 .date {
@@ -44,13 +47,13 @@ h2 {
   bottom: 150px;
   left: 500px;
   font-size: 30px;
-  font-weight: 550;
+  font-weight: 545;
 }
 .units {
   position: relative;
-  bottom: 50px;
+  bottom: 45px;
   left: 55px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 550;
 }
 .details {
