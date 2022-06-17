@@ -26,7 +26,7 @@ let months = [
 let month = months[now.getMonth()];
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Friday", "Saturday"];
 let day = days[now.getDay()];
-h3.innerHTML = `${day}  ${month} ${dates},</br> ${hours}:${minutes}`;
+h3.innerHTML = `${day} ${month} ${dates},</br> ${hours}:${minutes}`;
 
 // Search Engine
 
