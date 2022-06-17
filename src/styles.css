@@ -36,7 +36,7 @@ h2 {
 .temperature {
   position: relative;
   left: 50px;
-  font-size: 64px;
+  font-size: 80 px;
   font-weight: 550;
 }
 .date {
