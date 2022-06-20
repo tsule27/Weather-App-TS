@@ -42,6 +42,13 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   document.querySelector("h2").innerHTML = response.data.weather[0].main;
+
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute("src", `images/${cityIcon}.png`);
 }
 
 function displaySearch(city) {
