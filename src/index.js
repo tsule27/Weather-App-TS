@@ -31,27 +31,27 @@ h3.innerHTML = `${day} ${month} ${dates},</br> ${hours}:${minutes}`;
 // Search Engine
 
 function showTemperature(response) {
-  document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("#temperatures").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#precipitation").innerHTML = Math.round(
-    response.data.rain.1h
-  );
-  document.querySelector("#humidity").innerHTML = Math.round(
-    response.data.main.humidity
-  );
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("h2").innerHTML = response.data.weather[0].main;
+  let temperatureElement = document.querySelector("#temperatures");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  // let precipitationElement = document.querySelector("#precipitation");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
 
-  let icon = document.querySelector("#icon");
-  icon.setAttribute(
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].main;
+  //precipitationElement = Math.round( response.data.rain.1h );
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  icon.setAttribute("src", `images/${cityIcon}.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description); //setAttribute("src", `images/${cityIcon}.png`);
 }
 
 function displaySearch(city) {
@@ -87,7 +87,31 @@ function getCurrentLocation(event) {
 let currentButton = document.querySelector("#current-location");
 currentButton.addEventListener("click", getCurrentLocation);
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperatures");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperatures");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 displaySearch("Philadelphia");
