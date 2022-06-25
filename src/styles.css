@@ -1,20 +1,23 @@
 .container {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 60px;
-  max-width: 1000px;
+  padding: 20px;
+  max-width: 850px;
+}
+.weather-app-wrapper {
+  max-width: 850px;
+  margin: 10px auto;
+  border: 1px solid #dadde1;
   background: radial-gradient(
-    328px at 2.9% 15%,
-    rgb(191, 224, 251) 0%,
-    rgb(232, 233, 251) 25.8%,
-    rgb(252, 239, 250) 50.8%,
-    rgb(234, 251, 251) 77.6%,
-    rgb(240, 251, 244) 100.7%
+    circle at 14.2% 27.5%,
+    rgb(104, 199, 255) 0%,
+    rgb(181, 126, 255) 90%
   );
 }
-.card {
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
-}
+.weather-app {
+  padding: 20px;
 
+  border-radius: 5px;
+}
 h1 {
   margin: 38px;
   margin-bottom: 0px;
@@ -23,6 +26,7 @@ h1 {
   font-weight: 600;
   padding: 5px;
 }
+
 h2 {
   margin: 38px;
   margin-top: 0px;
