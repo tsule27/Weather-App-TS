@@ -77,7 +77,7 @@ h3 {
   margin: 0 aut0;
   padding: 0px;
 }
-.weather-temperature .active {
+.weather-temperature a {
   color: rgb(11, 11, 11);
   text-decoration: none;
   cursor: default;
