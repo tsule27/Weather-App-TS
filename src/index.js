@@ -24,7 +24,15 @@ let months = [
   "December",
 ];
 let month = months[now.getMonth()];
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Friday", "Saturday"];
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 let day = days[now.getDay()];
 h3.innerHTML = `${day} ${month} ${dates},</br> ${hours}:${minutes}`;
 
