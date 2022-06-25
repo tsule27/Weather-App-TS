@@ -1,12 +1,12 @@
 .container {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 20px;
-  max-width: 850px;
+  max-width: 950px;
 }
 .weather-app-wrapper {
-  max-width: 850px;
+  max-width: 2000px;
   margin: 10px auto;
-  border: 1px solid #dadde1;
+  border: 2px solid #dadde1;
   background: radial-gradient(
     circle at 14.2% 27.5%,
     rgb(104, 199, 255) 0%,
@@ -15,7 +15,6 @@
 }
 .weather-app {
   padding: 20px;
-
   border-radius: 5px;
 }
 h1 {
@@ -34,6 +33,14 @@ h2 {
   font-weight: 500;
   padding: 5px;
 }
+
+h3 {
+  position: relative;
+  bottom: 150px;
+  left: 500px;
+  font-size: 30px;
+  font-weight: 545;
+}
 .search-bar {
   padding: 30px;
 }
@@ -47,15 +54,10 @@ h2 {
   font-size: 70px;
   font-weight: 550;
 }
-.date {
-  position: relative;
-  bottom: 150px;
-  left: 500px;
-  font-size: 30px;
-  font-weight: 545;
-}
+
 .units {
   position: relative;
+  color: rgb(11, 11, 11);
   bottom: 45px;
   left: 55px;
   font-size: 25px;
@@ -75,8 +77,9 @@ h2 {
   margin: 0 aut0;
   padding: 0px;
 }
-.weather-temperature.active {
+.weather-temperature .active {
   color: rgb(11, 11, 11);
   text-decoration: none;
   cursor: default;
+  text-decoration-line: none;
 }

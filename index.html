@@ -20,21 +20,25 @@
         <div class="weather-app">
           <form class="search-bar" id ="search-form" class="mb-2">
             <div class="row">
-            <div class="col-9">
+            <div class="col-7">
               <input
                 type="text"
                 placeholder="Enter location"
                 autocomplete="off"
                 id="search-input"
+                class="form-control"
               />
-              <input type="submit" value=" 🔍 Search" />
+              </div>
+               <div class="col" id="buttons">
+              <input type="submit" value=" 🔍 Search"  />
               <input type="submit" id ="current-location" value=" Current location" />
             </div>
             </div>
           </form>
-        </div>
+  <div class="overview">
         <h1 id ="city"></h1>
         <h2 id="description"></h2>
+        </div>
         <div class="col mt-2">
           <div class="weather-temperature">
           <img
@@ -45,13 +49,14 @@
             width="160px"
           />
 					<span class="temperature"> <strong id= "temperatures"></strong></span>
-					<span class="units" ><a href="#" id="celsius" class="active">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
-          <span>
-            <h3 class="date" id = "date"></br></h3>
-            <div class="details" >Humidity:<span id="humidity"></span><span id="percent">% </span></div>
+					<span class="units" ><a href="#" style="text-decoration:none; "id="celsius" class="active">°C</a> | <a href="#" style="text-decoration:none;" id="fahrenheit">°F</a></span>
+           </div>
+          <span class="float-right">
+            <h3  class ="date" id = "date"></br></h3>
+            <div class="details" >Humidity: <span id="humidity"></span><span id="percent">%</span></div>
             <div class="details" >Wind: <span id ="wind"></span><span id="kmh">km/h</span></div>
           </span>
-          </div>
+         
         </div>
         <br />
         <div class="accordion" id="accordionExample">
@@ -99,6 +104,7 @@
                     Tuesday<br />
                     <img src="src/images/sunny.png" width="50px" />
                     <div>25° 13°</div>
+                    </div>
                   </div>
                 </div>
               </div>
