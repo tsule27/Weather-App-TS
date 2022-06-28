@@ -1,6 +1,6 @@
 .container {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 20px;
+  padding: 10px;
   max-width: 950px;
 }
 .weather-app-wrapper {
@@ -98,4 +98,11 @@ h3 {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+}
+.footer {
+  font-size: 14px;
+
+  line-height: 18px;
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
 }
