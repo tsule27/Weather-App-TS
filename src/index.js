@@ -36,6 +36,35 @@ let days = [
 let day = days[now.getDay()];
 h3.innerHTML = `${day} ${month} ${dates},</br> ${hours}:${minutes}`;
 
+//Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+  let forecastHTML = ` <div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+ 
+   <div class="col 2">
+   <div class="weather-forecast-date">
+    ${day}
+     <br />
+     <img
+    class="rainsun-icon"
+    src="src/images/partlycloudyrainsunny.png"
+    width="42px"
+    />
+     <div class="weather-forecast-temperatures"><span class="weather-forecast-temperature-max">22°</span> <span class="weather-forecast-temperature-min">17°</span></div>
+     </div>
+     </div>`;
+  });
+  forecastHTML = forecastHTML + ` </div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // Search Engine
 
 function showTemperature(response) {
@@ -120,3 +149,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 displaySearch("Philadelphia");
+displayForecast();

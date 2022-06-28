@@ -71,15 +71,31 @@ h3 {
   font-size: 20px;
 }
 
+.weather-temperature a {
+  color: rgb(11, 11, 11);
+  text-decoration: none;
+  cursor: default;
+  text-decoration-line: none;
+}
 .accordion {
   position: relative;
   bottom: 100px;
   margin: 0 aut0;
   padding: 0px;
 }
-.weather-temperature a {
-  color: rgb(11, 11, 11);
-  text-decoration: none;
-  cursor: default;
-  text-decoration-line: none;
+.accordion-header {
+  margin: 0 auto;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
