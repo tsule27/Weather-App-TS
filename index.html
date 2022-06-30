@@ -8,6 +8,10 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
      <link rel="stylesheet" href="src/styles.css" />
@@ -18,74 +22,68 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form class="search-bar" id ="search-form" class="mb-2">
-            <div class="row">
-            <div class="col-7">
-              <input
+          
+  <div class="overview">
+     <div class="row g-0  ">
+       <div class="col-8  box--location">
+      <h1 id ="city"></h1>
+<h2 class ="date" id = "date"></h2>
+</div>
+   <div class="search-position mb-3"><form class="search-bar" id ="search-form" >
+          <div class ="col-2 searching">   
+             <input
                 type="text"
                 placeholder="Enter location"
                 autocomplete="off"
                 id="search-input"
-                class="form-control"
+                class="form-control "
               />
+              </div> 
+               <span class= search-buttons id="buttons">
+              <input type="submit" class="btn btn-light"id = "Search" value=" 🔍 "  />
+              <input type="submit" class="btn btn-light" id ="current-location" value=" 📍" />
+       </span>
+            
+          </form></div>
+
+     </div>
+          <div class="row g-0 d-flex align-items-end mt-4 position-relative">
+            <div class="col-6 box--current-weather">
+               <h3 id="description"></h3>
+              <div class="temperature d-flex align-items-top">
+                <h4 class="temperature" id="temperatures"></h4>
+                <span class="units" ><a href="#" id="celsius" class="active">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
               </div>
-               <div class="col" id="buttons">
-              <input type="submit" value=" 🔍 Search"  />
-              <input type="submit" id ="current-location" value=" Current location" />
+              <div class="d-flex justify-content-start weather-data">
+                <span class="d-flex align-items-center weather-data-details"
+                 >Humidity: <span id="humidity"></span><span id="percent">%  </span>
+                 
+                <span class="d-flex align-items-center weather-data-details"
+                  >  Wind: <span id ="wind"></span><span id="kmh">km/h</span>
+              </div>
             </div>
-            </div>
-          </form>
-  <div class="overview">
-        <h1 id ="city"></h1>
-        <h2 id="description"></h2>
-        </div>
-        <div class="col mt-2">
-          <div class="weather-temperature">
-          <img
-            class="main"
+            <div class="col-6 d-flex ">
+              <img class="main"
             src=""
             alt="sunny"
             id="icon"
             width="160px"
-          />
-					<span class="temperature"> <strong id= "temperatures"></strong></span>
-					<span class="units" ><a href="#" id="celsius" class="active">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
-           </div>
-          <span class="float-right">
-            <h3  class ="date" id = "date"><br/></h3>
-            <div class="details" >Humidity: <span id="humidity"></span><span id="percent">%</span></div>
-            <div class="details" >Wind: <span id ="wind"></span><span id="kmh">km/h</span></div>
-          </span>
-         
-        </div>
-        <br />
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                Forecast: Next 6 days
-              </button>
-            </h2>
-            <div class="accordion-body" >
+          /> 
+            </div>
+          </div>
+          <div class="line-break"></div>
               <div class="weather-forecast" id="forecast"></div>
                   </div>
                   </div>
               </div>
+        </div>
             </div>
           </div>
         </div>
       </div>
       <div class="footer"> This project was coded by Tanvi Sule and is <a href= https://github.com/tsule27/Weather-App-TS/blob/main/index.html target="_blank"> open-sourced on GitHub</a>, hosted on Netlify</div>
     </div>
-
-
-    <script src="src/index.js"></script>
+<script src="src/index.js"></script>
   </body>
 </html>
+

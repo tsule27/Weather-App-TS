@@ -1,5 +1,5 @@
 let now = new Date();
-let h3 = document.querySelector("#date");
+let h2 = document.querySelector("#date");
 let hours = now.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
@@ -34,7 +34,7 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-h3.innerHTML = `${day} ${month} ${dates},</br> ${hours}:${minutes}`;
+h2.innerHTML = `Last updated: ${day} ${month} ${dates} at ${hours}:${minutes}`;
 
 //Forecast
 
@@ -58,18 +58,22 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = ` <div class="row">`;
-  forecast.slice(1).forEach(function (forecastDay, index) {
-    if (index < 6) {
+  let forecastHTML = ` <div class="row gx-0">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index > 0 && index < 6) {
       forecastHTML =
         forecastHTML +
         `
    <div class="col 2">
+   <div class ="card-body">
    <div class="weather-forecast-date">${formatDay(forecastDay.dt)}
      <br />
      <img
-    class="rainsun-icon"
-    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+    class="icon-now"
+    src= "http://openweathermap.org/img/wn/${
+      forecastDay.weather[0].icon
+    }@2x.png"
     width="42px"
     />
      <div class="weather-forecast-temperatures"><span class="weather-forecast-temperature-max">${Math.round(
@@ -77,6 +81,7 @@ function displayForecast(response) {
      )}°</span> <span class="weather-forecast-temperature-min">${Math.round(
           forecastDay.temp.min
         )}°</span></div>
+     </div>
      </div>
      </div>`;
     }
