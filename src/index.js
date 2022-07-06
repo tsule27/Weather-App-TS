@@ -69,13 +69,13 @@ function displayForecast(response) {
    <div class ="card-body">
    <div class="weather-forecast-date">${formatDay(forecastDay.dt)}
      <br />
-     <img
-    class="icon-now"
-    src= "http://openweathermap.org/img/wn/${
-      forecastDay.weather[0].icon
-    }@2x.png"
-    width="42px"
-    />
+     <div><img
+    
+     src=" icons/${
+       forecastDay.weather[0].icon
+     }.svg" width="42px" class="icon-now" id="forecast-image"/>
+    
+    </div>
      <div class="weather-forecast-temperatures"><span class="weather-forecast-temperature-max">${Math.round(
        forecastDay.temp.max
      )}°</span> <span class="weather-forecast-temperature-min">${Math.round(
@@ -112,10 +112,7 @@ function showTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].main;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", `icons.svg`);
   iconElement.setAttribute("alt", response.data.weather[0].description); //setAttribute("src", `images/${cityIcon}.png`);
 
   getForecast(response.data.coord);
