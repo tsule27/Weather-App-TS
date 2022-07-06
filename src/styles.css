@@ -1,11 +1,11 @@
 .container {
   font-family: "Poppins", sans-serif;
   padding: 10px;
-  max-width: 560px;
+  max-width: 670px;
   margin: 10px auto;
 }
 .weather-app-wrapper {
-  max-width: 2000px;
+  max-width: 5000px;
   margin: 10px auto;
   border: 2px solid #dadde1;
   background: radial-gradient(
@@ -14,10 +14,11 @@
     rgb(247, 198, 169) 54.2%,
     rgb(21, 186, 196) 100.3%
   );
-  border-radius: 30px;
+  border-radius: 60px;
 }
 .weather-app {
-  padding: 20px;
+  padding: 30px 15px 30px 40px;
+
   border-radius: 5px;
 }
 h1 {
@@ -34,6 +35,7 @@ h2 {
   font-size: 15px;
   font-weight: 500;
   padding: 5px;
+  color: rgb(136, 136, 136);
 }
 
 h3 {
@@ -71,6 +73,7 @@ h4 {
 }
 .box--current-weather {
   background: rgb(255, 255, 255, 0.4);
+
   border-radius: 1.35rem;
   padding: 0.8rem 1.2rem;
   color: black;
@@ -92,20 +95,13 @@ h4 {
   align-items: stretch;
   width: 100%;
 }
-.search-buttons {
-  background: rgb(255, 255, 255, 0.4);
+.search-buttons .btn-1 .btn-2 {
+  margin: 0px;
+  padding: 0px;
 }
 .main {
   position: relative;
   left: 50px;
-}
-
-.details {
-  position: relative;
-  bottom: 140px;
-  left: 500px;
-  font-size: 20px;
-  margin-right: 10px;
 }
 
 .temperature a {
@@ -114,10 +110,21 @@ h4 {
   cursor: default;
   text-decoration-line: none;
 }
+
+.weather-data-details {
+  padding: 5px;
+}
+.icon-humidity,
+.icon-windspeed {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+  color: #178aa5;
+}
 .line-break {
   border-top: thin solid #178aa5;
   margin-top: 20px;
 }
+
 .card-body {
   background: rgb(255, 255, 255, 0.4);
   max-height: 130px;
@@ -127,6 +134,7 @@ h4 {
   border-radius: 15px;
   box-shadow: 0 1px 8px rgb(57, 127, 142, 0.3);
   text-align: center;
+  font-size: 12.5px;
 }
 .weather-forecast-temperature-min {
   color: rgb(136, 136, 136);

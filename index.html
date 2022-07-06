@@ -30,7 +30,7 @@
 <h2 class ="date" id = "date"></h2>
 </div>
    <div class="search-position mb-3"><form class="search-bar" id ="search-form" >
-          <div class ="col-2 searching">   
+          <div class ="col-3 searching">   
              <input
                 type="text"
                 placeholder="Enter location"
@@ -39,9 +39,9 @@
                 class="form-control "
               />
               </div> 
-               <span class= search-buttons id="buttons">
-              <input type="submit" class="btn btn-light"id = "Search" value=" 🔍 "  />
-              <input type="submit" class="btn btn-light" id ="current-location" value=" 📍" />
+               <span class= "col-2 search-buttons" id="buttons">
+              <input type="submit" class="btn 1"id = "Search" value=" 🔍 "  />
+              <input type="submit" class="btn btn-light-2" id ="current-location" value=" 📍" />
        </span>
             
           </form></div>
@@ -56,10 +56,10 @@
               </div>
               <div class="d-flex justify-content-start weather-data">
                 <span class="d-flex align-items-center weather-data-details"
-                 >Humidity: <span id="humidity"></span><span id="percent">%  </span>
-                 
+                 ><img src =" icons/icon_humidity.svg" class="icon-humidity"><span id="humidity"></span><span id="percent"> %  </span></span>
+             
                 <span class="d-flex align-items-center weather-data-details"
-                  >  Wind: <span id ="wind"></span><span id="kmh">km/h</span>
+                  > <img src =" icons/icon_windspeed.svg" class="icon-windspeed">  <span id ="wind"></span><span id="kmh">km/h</span>
               </div>
             </div>
             <div class="col-6 d-flex ">
