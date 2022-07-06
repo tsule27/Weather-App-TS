@@ -1,7 +1,7 @@
 .container {
   font-family: "Poppins", sans-serif;
   padding: 10px;
-  max-width: 670px;
+  max-width: 600px;
   margin: 10px auto;
 }
 .weather-app-wrapper {
@@ -14,11 +14,10 @@
     rgb(247, 198, 169) 54.2%,
     rgb(21, 186, 196) 100.3%
   );
-  border-radius: 60px;
+  border-radius: 50px;
 }
 .weather-app {
-  padding: 30px 15px 30px 40px;
-
+  padding: 30px 10px 30px 23px;
   border-radius: 5px;
 }
 h1 {
@@ -84,7 +83,7 @@ h4 {
 
 .search-position {
   position: absolute;
-  width: 54%;
+  width: 52%;
   right: 0;
 }
 
@@ -118,11 +117,11 @@ h4 {
 .icon-windspeed {
   width: 1.5rem;
   margin-right: 0.5rem;
-  color: #178aa5;
 }
 .line-break {
   border-top: thin solid #178aa5;
   margin-top: 20px;
+  max-width: 527px;
 }
 
 .card-body {
