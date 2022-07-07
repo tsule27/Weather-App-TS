@@ -70,7 +70,7 @@ function displayForecast(response) {
    <div class="weather-forecast-date">${formatDay(forecastDay.dt)}
      <br />
      <div><img
-    src="../icons/${
+    src="icons/${
       forecastDay.weather[0].icon
     }.png" width="42px" class="icon-now" id="forecast-image"/>
      
@@ -111,14 +111,8 @@ function showTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].main;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute(
-    "src",
-    `../icons/${response.data.weather[0].icon}.png`
-  );
-  iconElement.setAttribute(
-    "alt",
-    `../icons/${response.data.weather[0].icon}.png`
-  );
+  iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.png`);
+  iconElement.setAttribute("alt", `icons/${response.data.weather[0].icon}.png`);
 
   getForecast(response.data.coord);
 }
