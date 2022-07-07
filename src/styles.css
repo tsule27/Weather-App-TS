@@ -1,19 +1,23 @@
 .container {
   font-family: "Poppins", sans-serif;
-  padding: 10px;
-  max-width: 600px;
-  margin: 10px auto;
-}
-.weather-app-wrapper {
-  max-width: 5000px;
-  margin: 10px auto;
-  border: 2px solid #dadde1;
+  max-width: 800px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  padding: 15px 10px 15px 10px;
+  border-radius: 50px;
   background: radial-gradient(
     circle at 10% 20%,
-    rgb(253, 239, 132) 0%,
-    rgb(247, 198, 169) 54.2%,
-    rgb(21, 186, 196) 100.3%
+
+    rgb(21, 186, 196) 0%,
+    rgb(247, 198, 169) 55%,
+    rgb(253, 239, 132) 110%
   );
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 10px auto;
+  border: 2px solid #dadde1;
+  background: rgba(238, 232, 232, 0.4);
   border-radius: 50px;
 }
 .weather-app {

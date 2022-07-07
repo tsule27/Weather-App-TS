@@ -70,11 +70,10 @@ function displayForecast(response) {
    <div class="weather-forecast-date">${formatDay(forecastDay.dt)}
      <br />
      <div><img
-    
-     src=" icons/${
-       forecastDay.weather[0].icon
-     }.svg" width="42px" class="icon-now" id="forecast-image"/>
-    
+    src="icons/${
+      forecastDay.weather[0].icon
+    }.png" width="42px" class="icon-now" id="forecast-image"/>
+     
     </div>
      <div class="weather-forecast-temperatures"><span class="weather-forecast-temperature-max">${Math.round(
        forecastDay.temp.max
@@ -112,8 +111,8 @@ function showTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].main;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute("src", `icons.svg`);
-  iconElement.setAttribute("alt", response.data.weather[0].description); //setAttribute("src", `images/${cityIcon}.png`);
+  iconElement.setAttribute("src", `icons/${response.data.weather[0].icon}.png`);
+  iconElement.setAttribute("alt", `icons/${response.data.weather[0].icon}.png`);
 
   getForecast(response.data.coord);
 }
