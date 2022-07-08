@@ -14,14 +14,15 @@
   );
 }
 .weather-app-wrapper {
-  max-width: 600px;
-  margin: 10px auto;
+  max-width: 630px;
+
+  margin: 60px auto;
   border: 2px solid #dadde1;
-  background: rgba(238, 232, 232, 0.4);
+  background: rgba(174, 171, 171, 0.4);
   border-radius: 50px;
 }
 .weather-app {
-  padding: 30px 10px 30px 25px;
+  padding: 30px 20px 30px 25px;
   border-radius: 5px;
 }
 h1 {
@@ -76,7 +77,6 @@ h4 {
 }
 .box--current-weather {
   background: rgb(255, 255, 255, 0.4);
-
   border-radius: 1.35rem;
   padding: 0.8rem 1.2rem;
   color: black;
@@ -125,7 +125,7 @@ h4 {
 .line-break {
   border-top: thin solid #178aa5;
   margin-top: 20px;
-  max-width: 527px;
+  max-width: 535px;
 }
 
 .card-body {
